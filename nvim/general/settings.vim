@@ -49,8 +49,6 @@ set splitbelow splitright
 
 "2 - Vim User Interface
 
-"Always show current position
-set ruler
 
 " Ignore case + smart case
 set ignorecase
@@ -65,9 +63,9 @@ set lazyredraw
 " For regex
 set magic
 
-" Set relative number
-set number relativenumber
-
+" Set number
+set number
+"
 " 3 - Colours and fonts
 
 " Enable syntax highlighting
@@ -88,14 +86,7 @@ catch
 endtry
 
 " 5 - Text, tab and indent related
-"
-" Use spaces insteado of tabs
-set expandtab
 
-"Use smart tabs
-set smarttab
-
-" 1 tab = 2 spaces
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
@@ -147,10 +138,3 @@ map <leader>tm :tabmove
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<cr>
 au TabLeave * let g:lasttab = tabpagenr()
-
-" Opens new tab with current buffer's path
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to directory of open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
