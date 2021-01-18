@@ -23,7 +23,7 @@ filetype indent on
 set mouse=a
 
 " Set vim history
-set hstory=100
+set history=100
 
 " Remeber the line vim was last on when reopening a file
 if has("autocmd")
