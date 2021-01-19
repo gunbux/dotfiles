@@ -16,7 +16,7 @@
 set encoding=UTF-8
 
 " Enable Filetype Plugins (Disable if laggy)
-filetype plugin on
+filetype plugin off
 filetype indent on
 
 " Enable mouse
