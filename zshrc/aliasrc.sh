@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 # aliasrc.sh - Contains all useful aliases for use in bash or zsh. Source it in bashrc or zshrc to use it.
 # A lot of these are taken from personal experiences, as well as Mental Outlaws aliases.
