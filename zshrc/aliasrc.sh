@@ -7,31 +7,30 @@
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # Beginning of aliases
+
+# Unix utilities
 alias \
-	# Unix utilities
-	#ip - gets ip
 	ip="curl ipinfo.io/ip" \
 	ports="netstat -tulanp" \
 	untar="tar -zxvf" \
 	sha="shasum -a 256" \
 
-	# QOL aliases
+# QOL aliases
+alias \
 	cl="clear" \
 	nf="neofetch" \
-	# Add prompts when overwriting
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -v" \
-	# Creates parent dirs if it does not exist
 	mkdir="mkdir -pv" \
 
-	# ls aliases
-	# lm - lists last modified 
+# ls aliases
+alias \
 	lm="ls -t -1" \
-	# lb - list bytes: display size and sort by size
-	lb="ls --human-readable --size -1 -S --classify" \
+	lb="ls -h -1 -S" \
 
-	# Specific Programs aliases
+# Specific Programs aliases
+alias \
 	yt="youtube-dl --addmetadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	python="python3" \
@@ -42,8 +41,9 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 
-	#Adds colour to commands
-	ls="ls -hN --color=auto --group-directories-first" \
+# Adds colour to commands
+alias \
+	ls="ls -h --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 

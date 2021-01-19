@@ -98,13 +98,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-alias py="python"
-alias v="nvim"
-alias nf="neofetch"
-alias cl="clear"
-alias vim="nvim"
+
+
 alias /git="cd ~/gitfiles"
 alias init.vim="nvim ~/.config/nvim/init.vim"
 alias zshrc="nvim ~/.zshrc"
-alias python=python3
+source $HOME/.config/aliasrc.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
