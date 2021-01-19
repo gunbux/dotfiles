@@ -39,7 +39,7 @@ alias \
 	sdn="shutdown -h now" \
 	f="$FILE" \
 	e="$EDITOR" \
-	v="$EDITOR" \
+	v="vim" \
 
 # Adds colour to commands
 alias \
