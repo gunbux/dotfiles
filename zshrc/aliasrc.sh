@@ -33,13 +33,13 @@ alias \
 alias \
 	yt="youtube-dl --addmetadata -i" \
 	yta="yt -x -f bestaudio/best" \
+	v="nvim" \
 	python="python3" \
 	py="python"
 	g="git" \
 	sdn="shutdown -h now" \
 	f="$FILE" \
 	e="$EDITOR" \
-	v="vim" \
 
 # Adds colour to commands
 alias \
