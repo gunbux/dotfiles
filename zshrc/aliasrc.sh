@@ -34,6 +34,8 @@ alias \
 	# Specific Programs aliases
 	yt="youtube-dl --addmetadata -i" \
 	yta="yt -x -f bestaudio/best" \
+	python="python3" \
+	py="python"
 	g="git" \
 	sdn="shutdown -h now" \
 	f="$FILE" \
