@@ -35,3 +35,5 @@ systemctl enable bluetooth
 systemctl enable cups
 systemctl enable sshd
 
+echo "Script Completed. Removing script from home..."
+rm /pacman.sh

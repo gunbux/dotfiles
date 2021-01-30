@@ -19,8 +19,8 @@ echo "Packages installed"
 echo ""
 
 echo "Inserting remaining install scripts into mountpoint..."
-mv pacman.sh /mnt/tmp/pacman.sh
-mv swap.sh /mnt/tmp/swap.sh
+mv pacman.sh /mnt/pacman.sh
+mv swap.sh /mnt/swap.sh
 
 # Generate fstab for installation - Do this only after you are sure that all the subvolumes have been mounted properly
 echo "Generating fstab..."

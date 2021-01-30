@@ -20,3 +20,7 @@ echo "/swap/swapfile none swap defaults 00" >> /etc/fstab
 
 # Set up timezone
 ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
+
+echo""
+echo "Script complete. Removing script from home..."
+rm /swap.sh
