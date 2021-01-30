@@ -8,11 +8,11 @@ curl https://raw.githubusercontent.com/gunbux/dotfiles/testing/scripts/install/i
 curl https://raw.githubusercontent.com/gunbux/dotfiles/testing/scripts/install/pacstrap.sh -o pacstrap.sh
 curl https://raw.githubusercontent.com/gunbux/dotfiles/testing/scripts/install/swap.sh -o swap.sh
 curl https://raw.githubusercontent.com/gunbux/dotfiles/testing/scripts/install/pacman.sh -o pacman.sh
-curl https://raw.githubusercontent.com/gunbux/dotfiles/testing/scripts/install/install.sh -o isntall.sh
+curl https://raw.githubusercontent.com/gunbux/dotfiles/testing/scripts/install/install.sh -o install.sh
 
 # Change permisions for all shell scripts
 chmod 777 btrfs.sh
-chmod 777 inital.sh
+chmod 777 initial.sh
 chmod 777 pacstrap.sh
 chmod 777 swap.sh
 chmod 777 pacman.sh
