@@ -7,22 +7,6 @@
 host=$1
 locale=$2
 
-# Setting up of swapfile
-truncate -s 0 /swap/swapfile
-chattr +C /swap/swapfile
-btrfs property set /swap/swapfile compression none
-dd if=/dev/zero of=/swap/swapfile bs=1G count=8 status=progress
-chmod 600 /swap/swapfile
-mkswap /swap/swapfile
-swapon /swap/swapfile
-
-echo "/swap/swapfile none swap defaults 00" >> /etc/fstab
-
-# Set up timezone
-ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
-## TODO: Check if its a double dash flag
-hwclock --systohc
-
 # Generate locales
 echo $locale >> /etc/locale.gen
 locale-gen
