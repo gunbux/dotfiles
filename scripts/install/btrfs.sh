@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # btrfs.sh - shell script for setting up btrfs subvolumes on arch
+# USAGE: btrfs [main partition] [boot partition]
 
 p=$1 # - var for main parition
 b=$2 # - var for boot parition
@@ -21,21 +22,25 @@ btrfs su cr /mnt/@tmp
 btrfs su cr /mnt/@swap
 btrfs su cr /mnt/@.snapshots
 
-echo "subvolumes created, list of snapshots is $(ls)"
+echo "subvolumes created, list of snapshots is $(ls /mnt)"
+echo ""
 
 # Unmounts partition for proper remounting with subvolumes
 echo "Unmounting partitions..."
 umount /mnt
 echo "Partition unmounted."
+echo ""
 
 # Remount the partition with specific options and subvolumes
 echo "Remounting partition with specific options..."
 mount -o noatime,compress=lzo,space_cache,subvol=@root /dev/$p /mnt
 echo "Root partition mounted"
+echo ""
 
 # Make directories for mounting the rest of the subvolumes
 echo "Making directories for rest of the subvolumes..."
 mkdir /mnt/{boot,home,var,srv,opt,tmp,swap,.snapshots}
+echo ""
 
 # Continue mounting the rest of the subvolumes
 echo "Mounting remaining subvolumes..."
@@ -48,13 +53,15 @@ mount -o noatime,compress=lzo,space_cache,subvol=@.snapshots /dev/$p /mnt/.snaps
 mount -o nodatacow,subvol=@var /dev/$p /mnt/var
 mount -o nodatacow,subvol=@swap /dev/$p /mnt/swap
 echo "All subvolumes mounted"
+echo ""
 
 # Mount the boot partition into boot (For dual booting)
 echo "Mounting boot partition..."
 mount /dev/$b /mnt/boot
 
 echo "All partitions mounted"
+echo ""
 # Print out lsblk to ensure subvolumes are mounted
 lsblk
 
-echo "Script complete."
+echo "Script complete. Please proceed to pacstrap.sh"
