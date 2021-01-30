@@ -25,15 +25,5 @@ pacman --noconfirm -S $packages
 
 echo ""
 echo "Script complete. Please proceed to modify /etc/hostsname and /etc/mkinitcpio.conf before remaking the linux image with mkinitcpio -p linux, then proceeding to the next step"
-# Grub installation
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
-
-# Enable systemd daemons for startup
-systemctl enable NetworkManager
-systemctl enable bluetooth
-systemctl enable cups
-systemctl enable sshd
-
-echo "Script Completed. Removing script from home..."
+echo "Removing script from home..."
 rm /pacman.sh
