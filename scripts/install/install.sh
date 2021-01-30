@@ -14,4 +14,6 @@ systemctl enable bluetooth
 systemctl enable cups
 systemctl enable sshd
 
-echo Script completed. Please proceed to the next step.""
+echo "Script completed. Please proceed to the next step."
+echo "Removing script..."
+rm install.sh
