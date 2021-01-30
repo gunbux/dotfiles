@@ -6,6 +6,10 @@
 
 packages="base linux linux-firmware amd-ucode neovim btrfs-progs"
 
+# Refresheys for older arch isos
+echo "Refreshing keys"
+pacman-keys --populate
+pacman-keys --refresh-keys
 echo "Packages to be installed: $packages"
 # Install packages into mnt
 pacstrap /mnt $packages
