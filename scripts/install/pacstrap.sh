@@ -4,7 +4,7 @@
 
 # List of packages to be installed. Be sure to change out amd-ucode if using something other than an AMD CPU/APU
 
-packages="base linux linux-firmware and-ucode neovim btrfs-progs"
+packages="base linux linux-firmware amd-ucode neovim btrfs-progs"
 
 echo "Packages to be installed: $packages"
 # Install packages into mnt
