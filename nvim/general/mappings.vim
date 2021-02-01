@@ -33,7 +33,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 map <leader>o :setlocal hlsearch<CR>
 
 " Keybind for replcing text
-nnoremap S :%S//gI<Left><Left><Left>
+nnoremap S :%s//gI<Left><Left><Left>
 
 
 " Bindings for plugins
