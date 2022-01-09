@@ -100,8 +100,8 @@ syntax enable on
 set t_Co=256
 
 " Optional UI Improvement
-"set cursorline
-"set cursorcolumn
+set cursorline
+set cursorcolumn
 "highlight CursorLine cterm=bold guibg=#2b2b2b
 "highlight CursorColumn cterm=bold guibg=#2b2b2b
 
@@ -209,6 +209,9 @@ try
     set stal=2
 catch
 endtry
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " 8 - Status Line
 "

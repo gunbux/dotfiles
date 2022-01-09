@@ -13,9 +13,6 @@ inoremap kk <Esc>
 nnoremap <leader>d :!mkdir<Space>
 nnoremap <leader>m :!mv<Space>%<Space>
 
-"Toggle autocommenting
-map <leader>c :setlocal formatoptions-=cro<CR>
-
 " Better split navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -40,6 +37,10 @@ nnoremap S :%S//gI<Left><Left><Left>
 "
 " Goyo Keybinds
 nnoremap <leader>g :Goyo<CR>
+
+" vimtex compile
+nmap <leader>\ <plug>(vimtex-compile)
+nmap <F12> <plug>(vimtex-view)
 
 " NERDTree Keybinds
 map <leader>f :NERDTreeToggle<Cr>

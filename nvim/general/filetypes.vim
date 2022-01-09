@@ -1,7 +1,7 @@
-autocmd BufRead,BufNewFile *.tex set filetype=tex
-autocmd BufRead,BufNewFile *.py set filetype=python
-autocmd BufRead,BufNewFile *.js set filetype=javascript
-autocmd BufRead,BufNewFile *.md set filetype=markdown
+"autocmd BufRead,BufNewFile *.tex set filetype=tex
+"autocmd BufRead,BufNewFile *.py set filetype=python
+"autocmd BufRead,BufNewFile *.js set filetype=javascript
+"autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 """"""""""""""""""""""""""""""
 " => Python section

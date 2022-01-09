@@ -4,6 +4,7 @@
 
 call plug#begin('$HOME/.config/nvim/general/plugins')
 
+Plug 'lervag/vimtex'
 Plug 'liuchengxu/eleline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'mattn/emmet-vim'
@@ -19,5 +20,4 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
-let g:dracula_colorterm = 0
 colorscheme dracula
